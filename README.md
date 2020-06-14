@@ -1,1 +1,1 @@
-# omnifood_website_project
+# Omnifood website project
