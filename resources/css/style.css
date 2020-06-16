@@ -1,6 +1,10 @@
+/* orange color - #e67e22 */
+
+/* --------------------------------- */
+/* BASIC SETUP */
+/* --------------------------------- */
+
 /* First formatting impacts all the elements. It eliminates margin, padding and define box size as border box. */
-
-
 * {
     margin: 0;
     padding: 0;
@@ -19,6 +23,11 @@ html {
     text-rendering: optimizeLegibility; 
 }
 
+
+/* --------------------------------- */
+/* REUSABLE COMPONENTS */
+/* --------------------------------- */
+
 .row {
     /* Setting the only absolute value in css stylesheet, max-width*/
     max-width: 1140px;
@@ -26,24 +35,7 @@ html {
 }
 
 
-header {
-    /* The linear-gradient() CSS function creates an image consisting of a progressive transition between two or more colors along a straight line. Its result is an object of the <gradient> data type, which is a special kind of <image>. */
-    /* CSS has a variety of different properties that can reference an image file, displaying that file on a web page normally as part of an element’s background. This is done using the CSS image syntax, which is url(). */
-    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(img/hero.jpg);
-    /* cover - Resize the background image to cover the entire container, even if it has to stretch the image or cut a little bit off one of the edges*/
-    background-size: cover;
-    background-position: center;
-    height: 100vh;
-}
-
-.hero-text-box {
-    position: absolute;
-    width: 1140px;
-    top: 50%;
-    left: 50%;
-    /* The transform CSS property lets you rotate, scale, skew, or translate an element. It modifies the coordinate space of the CSS visual formatting model. */
-    transform: translate(-50%, -50%);
-}
+/* ----- HEADINGS ----- */
 
 h1 {
     margin-top: 0;
@@ -57,6 +49,8 @@ h1 {
     letter-spacing: 1px;
     word-spacing: 4px;
 }
+
+/* ----- BUTTONS ----- */
 
 .btn:link,
 .btn:visited {
@@ -78,6 +72,7 @@ h1 {
     :hover - selects links on mouse over
     :active - selects the active link
 */
+
 .btn-full:link,
 .btn-full:visited {
     background-color: #e67e22;
@@ -106,4 +101,61 @@ h1 {
 .btn-ghost:active {
     border: 1px solid #cf6d17;
     color: #fff;
+}
+
+/* --------------------------------- */
+/* HEADER */
+/* --------------------------------- */
+
+header {
+    /* The linear-gradient() CSS function creates an image consisting of a progressive transition between two or more colors along a straight line. Its result is an object of the <gradient> data type, which is a special kind of <image>. */
+    /* CSS has a variety of different properties that can reference an image file, displaying that file on a web page normally as part of an element’s background. This is done using the CSS image syntax, which is url(). */
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(img/hero.jpg);
+    /* cover - Resize the background image to cover the entire container, even if it has to stretch the image or cut a little bit off one of the edges*/
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+}
+
+.hero-text-box {
+    position: absolute;
+    width: 1140px;
+    top: 50%;
+    left: 50%;
+    /* The transform CSS property lets you rotate, scale, skew, or translate an element. It modifies the coordinate space of the CSS visual formatting model. */
+    transform: translate(-50%, -50%);
+}
+
+.logo {
+    height: 100px;
+    width: auto;
+    float: left;
+    margin-top: 20px;
+}
+
+.main-nav {
+    float: right;
+    list-style: none;
+    margin-top: 55px;
+}
+
+.main-nav li {
+    display: inline-block;
+    margin-left: 40px;
+}
+
+.main-nav li a:link,
+.main-nav li a:visited {
+    padding: 8px 0;
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 90%;
+    border-bottom: 2px solid transparent;
+    transition: border-bottom 0.2s;
+}
+
+.main-nav li a:hover,
+.main-nav li a:active {
+    border-bottom: 2px solid #e67e22;
 }
