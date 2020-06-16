@@ -51,21 +51,33 @@ h1 {
     color: #fff;
     font-size: 240%;
     font-weight: 300;
+    /* Convert text to uppercase */
     text-transform: uppercase;
+    /* text formatting: letter and word spacing */
     letter-spacing: 1px;
     word-spacing: 4px;
 }
 
 .btn:link,
 .btn:visited {
+    /* Display: inline-block allows to set a width and height on the element */
     display: inline-block;
     padding: 10px 30px;
     font-weight: 300;
+    /* The text-decoration shorthand CSS property sets the appearance of decorative lines on text. */
     text-decoration: none;
     border-radius: 200px;
+    /* CSS transitions provide a way to control animation speed when changing CSS properties. */
     transition: background-color 0.2s, border 0.2s, color 0.2s;
 }
 
+
+/* CSS Selectors:
+    :link - selects all unvisited links
+    :visited - selects all visited links
+    :hover - selects links on mouse over
+    :active - selects the active link
+*/
 .btn-full:link,
 .btn-full:visited {
     background-color: #e67e22;
