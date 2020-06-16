@@ -1,3 +1,6 @@
+/* First formatting impacts all the elements. It eliminates margin, padding and define box size as border box. */
+
+
 * {
     margin: 0;
     padding: 0;
@@ -7,19 +10,27 @@
 html {
     background-color: #fff;
     color: #555;
+    /* When specifying more than one font, if first not found, use the next one. "
     font-family: 'Lato', 'Arial', sans-serif;
+    /* The font-weight property sets how thick or thin characters in text should be displayed. */
     font-weight: 300;
     font-size: 20px;
+    /* The browser emphasizes legibility over rendering speed and geometric precision. This enables kerning and optional ligatures */
     text-rendering: optimizeLegibility; 
 }
 
 .row {
+    /* Setting the only absolute value in css stylesheet, max-width*/
     max-width: 1140px;
     margin: 0 auto;
 }
 
+
 header {
+    /* The linear-gradient() CSS function creates an image consisting of a progressive transition between two or more colors along a straight line. Its result is an object of the <gradient> data type, which is a special kind of <image>. */
+    /* CSS has a variety of different properties that can reference an image file, displaying that file on a web page normally as part of an element’s background. This is done using the CSS image syntax, which is url(). */
     background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(img/hero.jpg);
+    /* cover - Resize the background image to cover the entire container, even if it has to stretch the image or cut a little bit off one of the edges*/
     background-size: cover;
     background-position: center;
     height: 100vh;
@@ -30,6 +41,7 @@ header {
     width: 1140px;
     top: 50%;
     left: 50%;
+    /* The transform CSS property lets you rotate, scale, skew, or translate an element. It modifies the coordinate space of the CSS visual formatting model. */
     transform: translate(-50%, -50%);
 }
 
